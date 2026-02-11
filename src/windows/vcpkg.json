@@ -1,0 +1,10 @@
+{
+  "name": "icompression",
+  "version": "1.0.0",
+  "dependencies": [
+    {
+      "name": "libarchive",
+      "default-features": false
+    }
+  ]
+}
