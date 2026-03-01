@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.props" Condition="Exists('..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.props')" />
   <Import Project="..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.props" Condition="Exists('..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -88,7 +89,7 @@
     <VcpkgUseStatic>true</VcpkgUseStatic>
     <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
     <VcpkgHostTriplet>x64-windows-static</VcpkgHostTriplet>
-    <VcpkgInstalledDir>..\..\..\..\..\Documents\GitHub\vcpkg\installed</VcpkgInstalledDir>
+    <VcpkgInstalledDir>D:\vcpkg\installed</VcpkgInstalledDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -180,6 +181,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.targets" Condition="Exists('..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.targets')" />
+    <Import Project="..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.targets" Condition="Exists('..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -187,5 +189,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.props'))" />
     <Error Condition="!Exists('..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.1.0.0\build\native\vcpkg.D.Users.Miokawa.Documents.GitHub.vcpkg.targets'))" />
+    <Error Condition="!Exists('..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.props'))" />
+    <Error Condition="!Exists('..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\vcpkg.D.vcpkg.1.0.0\build\native\vcpkg.D.vcpkg.targets'))" />
   </Target>
 </Project>
